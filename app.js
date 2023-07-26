@@ -1,4 +1,6 @@
-const express = require('express')
+import { Express } from 'express'
+// const express = require('express')
+import cors 
 const logger = require('morgan')
 const cors = require('cors')
 
