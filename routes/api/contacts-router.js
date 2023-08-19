@@ -2,7 +2,7 @@ import express from "express";
 import contactsControllers from "../../controllers/contacts-controllers.js";
 import {validateBody} from "../../decorators/index.js";
 import contactsSchemas from "../../schemas/contacts-schemas.js";
-import {authentificate, isValidId} from "../../middlewares/index.js"
+import {authentificate, isValidId} from "../../middlewares/index.js";
 
 const contactsRouter = express.Router();
 
