@@ -12,6 +12,10 @@ usersRouter.post("/login", validateBody(usersSchemas.userSigninSchema), authCont
 
 usersRouter.get("/current", authentificate, authControllers.getCurrent);
 
+usersRouter.get("/verify/:verificationToken", authControllers.verify);
+
+usersRouter.post("/verify", validateBody(usersSchemas.userEmailSchema), authControllers.resendVerifyEmail);
+
 usersRouter.post("/logout", authentificate, authControllers.logout);
 
 usersRouter.patch("/avatars", authentificate, upload.single('avatarURL'), authControllers.addAvatar)
